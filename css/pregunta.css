@@ -1,0 +1,118 @@
+/* Animación de entrada del mensaje */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 2%;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0, 0, 0); 
+    background-color: rgba(0, 0, 0, 0.4); 
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Estilo de los mensajes dentro del modal */
+.modal-greetings > span {
+    animation: glow-modal 2.5s ease-in-out infinite;
+    color: white;
+}
+
+.modal-greetings {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+/* Animación de resplandor para el texto del modal */
+@keyframes glow-modal {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.7), 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* Estilo del contenido del modal */
+.modal-content {
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    text-align: center;
+
+}
+.modal-greetings .s1{
+    font-size: 38px;
+}
+
+/* Estilo para el input */
+input[type="text"] {
+    width: 100%; /* Ancho completo */
+    padding: 15px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+    background-color: #f0f0f0; /* Color de fondo */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+/* Efecto al enfocarse en el input */
+input[type="text"]:focus {
+    outline: none; /* Sin contorno */
+    background-color: #fff; /* Color de fondo al enfocar */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+}
+
+/* Estilo para el placeholder */
+input[type="text"]::placeholder {
+    color: #999; /* Color del texto del placeholder */
+    font-style: italic; /* Estilo itálico para el placeholder */
+}
+
+
+/* Estilo para el botón */
+.submitAnswer {
+    background-color: #90af4c; /* Color de fondo */
+    color: white; /* Color del texto */
+    padding: 15px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    cursor: pointer; /* Cursor tipo puntero al pasar el mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: all 0.3s ease; /* Transición suave */
+    margin-bottom:20px ;
+    margin-top: 5px;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.submitAnswer:hover {
+    background-color: #45a049; /* Color de fondo al pasar el mouse */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más intensa */
+}
+
+/* Efecto al hacer clic en el botón */
+.submitAnswer:active {
+    background-color: #8e8a3e; /* Color de fondo al hacer clic */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /* Sombra más ligera */
+}
